@@ -1,6 +1,3 @@
-#ifndef INC_3D_TRIANGLES_CONFIG_H
-#define INC_3D_TRIANGLES_CONFIG_H
+#pragma once
 
-
-
-#endif //INC_3D_TRIANGLES_CONFIG_H
+const double EPSILON = 0.0001;

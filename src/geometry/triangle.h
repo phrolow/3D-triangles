@@ -13,8 +13,6 @@ public:
         return points;
     }
 
-    Segment& intersection(Line line);
-
     bool intersects(Triangle other);
 
     Triangle(Vector p1, Vector p2, Vector p3) : points({p1, p2, p3}) {}

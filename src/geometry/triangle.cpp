@@ -10,7 +10,7 @@ bool Triangle::intersects(Triangle other) {
     std::vector<int> distances; // now from triangle 1 to plane pi2
 
     for(int i = 0; i < 3; i++) {
-        distances[i] = pi2.distance(points[i]);
+        distances.emplace_back(pi2.distance(points[i]));
     }
 
     if(distances[0] * distances[1] > 0
@@ -43,7 +43,7 @@ bool Triangle::intersects(Triangle other) {
     Vector& intersection_o = intersection.getO();
 
     for(int i = 0; i < 3; i++) {
-        proj[i] = intersection_d.dot(points[i] - intersection_o);   // pr^1_i = (D, p^1_i - O)
+        proj.emplace_back(intersection_d.dot(points[i] - intersection_o));   // pr^1_i = (D, p^1_i - O)
     }
 
     double&& t_1 = proj[0] + (proj[1] - proj[0]) *
